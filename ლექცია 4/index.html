@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/styes.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dashboard</title>
+  </head>
+  <body class="bg-cream p-16">
+    <div class="flex gap-16">
+      <div class="nav_container bg-white rounded-16 p-24 h-full-calc">
+        <div class="flex flex-col justify-between h-full">
+          <!--  this wil support navigation content  -->
+          <div>
+            <div class="logo">
+              <img src="./src/img/logo.svg" alt="logo" />
+            </div>
+            <input placeholder="search" class="base-input" />
+            <ul class="flex flex-col gap-16 mt-20">
+              <li class="text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/dashboard.svg" /></span>
+                Dashboard
+              </li>
+              <li class="text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/customers.svg" /></span>
+                Customers
+              </li>
+              <li class="text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/allreports.svg" /></span>
+                All report
+              </li>
+              <li class="text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/geography.svg" /></span>
+                Geography
+              </li>
+              <li class="text-xs flex align-center gap-4">
+                <span
+                  ><img class="w-16" src="./src/img/conversations.svg"
+                /></span>
+                Conversations
+              </li>
+              <li class="text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/details.svg" /></span>
+                Details
+              </li>
+              <li class="text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/export.svg" /></span>
+                Export
+              </li>
+            </ul>
+          </div>
+          <div>
+            <!-- this wil support user content -->
+            <div class="flex">
+              <div class="w-32">
+                <img alt="user" src="./src/img/user.png" />
+              </div>
+              <div class="flex flex-col mb-2">
+                <p class="text-xs flex align-center gap-4s">Gustavo Xavier</p>
+                <div class="pill text-xs flex align-center gap-4">
+                  <p>Admin</p>
+                </div>
+              </div>
+            </div>
+            <ul class="mt-4">
+              <li class="text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/settings.svg" /></span>
+                settings
+              </li>
+              <li class="text-danger text-xs flex align-center gap-4">
+                <span><img class="w-16" src="./src/img/logout.svg" /></span> Log
+                out
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main_contaier">
+        <!-- this wil support percentage contianer -->
+        <div class="flex gap-16">
+          <div class="bg-white rounded-16 p-24 w-35">
+            <h4 class="text-m">Revenues</h4>
+            <h2 class="text-xl mt-24">15% <span> -></span></h2>
+
+            <p class="text-xs mt-64">Increase compared to last week</p>
+            <button class="mt-8 bnt">Revenues report -></button>
+          </div>
+          <div class="bg-white rounded-16 p-24 w-35">
+            <h4 class="text-m">Lost deals</h4>
+            <h2 class="text-xl mt-24">4% <span> -></span></h2>
+            <p class="text-xs mt-64">You closed 96 out of 100 deals</p>
+            <button class="mt-8 bnt">All deals -></button>
+          </div>
+          <div class="bg-white rounded-16 p-24">
+            <h4>Quarter goal</h4>
+            <img alt="chart data" src="./src/img/ChartData.svg" />
+            <button class="mt-8 bnt">All deals -></button>
+          </div>
+        </div>
+        <!-- this wil support second contianer -->
+        <div class="flex gap-16 mt-16">
+          <!-- this wil support customers -->
+          <div class="bg-white rounded-16 p-24 w-50">
+            <ul class="flex flex-col gap-16">
+              <li class="flex">
+                <div class="flex gap-16">
+                  <div class="w-32">
+                    <img alt="user" src="./src/img/user.png" />
+                  </div>
+                  <div class="flex flex-col mb-2">
+                    <p class="text-xs flex align-center gap-4s">
+                      Gustavo Xavier
+                    </p>
+                    <p class="text-xs">Supermarket Villanova</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex">
+                <div class="flex gap-16">
+                  <div class="w-32">
+                    <img alt="user" src="./src/img/user.png" />
+                  </div>
+                  <div class="flex flex-col mb-2">
+                    <p class="text-xs flex align-center gap-4s">
+                      Gustavo Xavier
+                    </p>
+                    <p class="text-xs">Supermarket Villanova</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex">
+                <div class="flex gap-16">
+                  <div class="w-32">
+                    <img alt="user" src="./src/img/user.png" />
+                  </div>
+                  <div class="flex flex-col mb-2">
+                    <p class="text-xs flex align-center gap-4s">
+                      Gustavo Xavier
+                    </p>
+                    <p class="text-xs">Supermarket Villanova</p>
+                  </div>
+                </div>
+              </li>
+              <li class="flex">
+                <div class="flex gap-16">
+                  <div class="w-32">
+                    <img alt="user" src="./src/img/user.png" />
+                  </div>
+                  <div class="flex flex-col mb-2">
+                    <p class="text-xs flex align-center gap-4s">
+                      Gustavo Xavier
+                    </p>
+                    <p class="text-xs">Supermarket Villanova</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <button class="mt-8 bnt">All customers -></button>
+          </div>
+          <!-- this wil support Growth -->
+          <div class="flex flex-col gap-16">
+            <div class="bg-white rounded-16 p-24">
+              <h4 class="text-m">Growth</h4>
+
+              <img
+                alt="growth image"
+                class="mt-16"
+                src="./src/img/Growth.svg"
+              />
+            </div>
+            <div class="flex gap-16">
+              <div class="bg-white rounded-16 p-24">
+                <h3>Top month</h3>
+                <h2 class="mt-24">November</h2>
+                <h4>2019</h4>
+              </div>
+
+              <div class="bg-white rounded-16 p-24">
+                <h3>Top year</h3>
+                <h2 class="mt-24">2023</h2>
+                <p>96K sold so far</p>
+              </div>
+              <div class="bg-white rounded-16 p-24">
+                <h3>Top buyer</h3>
+                <div class="w-32 mt-16">
+                  <img alt="user" src="./src/img/user.png" />
+                </div>
+                <p class="mt-8">Maggie Johnson</p>
+                <p class="text-xs">Oasis Organic Inc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- this wil support third contianer -->
+        <div class="flex gap-16 mt-16">
+          <div class="bg-white rounded-16 p-24 w-30">
+            <h2 class="text-m">Chats</h2>
+            <p class="text-xs">2 unread messages</p>
+            <div class="flex gap-16 mt-24">
+              <div class="user_img_container">
+                <div class="w-32">
+                  <img alt="user" src="./src/img/user.png" />
+                </div>
+              </div>
+              <div class="user_img_container">
+                <div class="w-32">
+                  <img alt="user" src="./src/img/user.png" />
+                </div>
+              </div>
+              <div class="user_img_container">
+                <div class="w-32">
+                  <img alt="user" src="./src/img/user.png" />
+                </div>
+              </div>
+              <div class="user_img_container">
+                <div class="w-32">
+                  <img alt="user" src="./src/img/user.png" />
+                </div>
+              </div>
+            </div>
+            <button class="mt-8 bnt">All messages -></button>
+          </div>
+          <div class="bg-white rounded-16 p-24 w-30">
+            <h2>Top states</h2>
+            <div class="flex flex-col gap-4">
+              <div class="gradient_data w-full">NY</div>
+              <div class="gradient_data w-80">MA</div>
+              <div class="gradient_data w-60">NH</div>
+              <div class="gradient_data w-40">Or</div>
+            </div>
+          </div>
+          <div class="bg-white rounded-16 p-24 w-60">
+            <h2>New deals</h2>
+            <div class="flex flex-wrap gap-16">
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>Fruit2Go</span>
+              </div>
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>Marshall's MKT</span>
+              </div>
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>CCNT</span>
+              </div>
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>Joana Mini-market</span>
+              </div>
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>Little Brazil Vegan</span>
+              </div>
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>Target</span>
+              </div>
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>Organic Place</span>
+              </div>
+              <div class="bg-orange">
+                <img alt="plus" src="./src/img/plus.svg" />
+                <span>Morello's</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
