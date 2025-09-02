@@ -1,0 +1,177 @@
+/* div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: firstAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  position: relative;
+  animation-timing-function: linear;
+}
+
+@keyframes firstAnimation {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: green;
+    left: 0px;
+    top: 0px;
+  }
+} */
+
+/* div {
+  width: 100px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  color: white;
+  animation-name: MyMove;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+#div1 {
+  animation-timing-function: linear;
+}
+#div2 {
+  animation-timing-function: ease;
+}
+#div3 {
+  animation-timing-function: ease-in;
+}
+#div4 {
+  animation-timing-function: ease-out;
+}
+#div5 {
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes MyMove {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 400px;
+  }
+} */
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.car-container {
+  position: relative;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: carDrive 8s infinite linear;
+}
+
+.car-container svg {
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes carDrive {
+  0% {
+    left: -200px;
+    transform: translateX(0);
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: calc(100% + 200px);
+    transform: translateX(0);
+  }
+}
+
+.wheel1 {
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 300px 140px;
+}
+
+.wheel2 {
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 100px 140px;
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+.loader {
+  border: 16px solid #bdbdbd;
+  border-top: 16px solid rgb(137, 137, 231);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.noise {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png");
+  background-color: #b3a394;
+  animation: bgAnimate 0.2s linear infinite;
+}
+@keyframes bgAnimate {
+  0% {
+    background-position: 0% 0%;
+  }
+  20% {
+    background-position: 25% 25%;
+  }
+  40% {
+    background-position: 0% 25%;
+  }
+  60% {
+    background-position: 25% 0%;
+  }
+  80% {
+    background-position: 25% 25%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
