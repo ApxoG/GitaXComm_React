@@ -1,0 +1,48 @@
+.container {
+  width: 1280px;
+}
+
+.mobile_only {
+  display: none;
+}
+
+.width-50 {
+  width: 50%;
+}
+.p-18 {
+  padding: 18px;
+}
+.skill_contianer {
+  width: 186px;
+  height: 186px;
+}
+.gap-78 {
+  gap: 78px;
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 343px;
+  }
+  .mobile_only {
+    display: block;
+  }
+  .desktop_only {
+    display: none;
+  }
+  .width-50 {
+    width: 100%;
+  }
+  .reverse_content {
+    flex-direction: column-reverse;
+  }
+  .p-18 {
+    padding: 12px;
+  }
+  .skill_contianer {
+    width: 160px;
+    height: 160px;
+  }
+  .gap-78 {
+    gap: 20px;
+  }
+}
