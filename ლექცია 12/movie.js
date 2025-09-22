@@ -35,7 +35,7 @@ function showMovies(movies) {
 
   // movies არის უკვე ერეი და გადავატარეთ forEach იმის გამო რო არ ვცვლით ერეის და უბრალოდ ვხატავთ
   movies.forEach((movie) => {
-    console.log(movie);
+
 
     // დესტრუქცია მოვახდინეთ movie ელემენტბის და სათითაოდ ამოვიღეთ ის რაც გვჭირდებოდა
     const { title, backdrop_path, vote_average, overview } = movie;
@@ -60,7 +60,7 @@ function showMovies(movies) {
 
     // მოდალის გახსნა კლიკზე 
     movieEl.addEventListener('click', () => {
-      openModal(movie); // გადავცემთ მთლიან movie ობიექტს
+      openModal(movie);
     });
     // მთავარ დივს გადავეცით html ს სტრუქტურა რომ ყველფაერი დაეხატა
     main.appendChild(movieEl);
