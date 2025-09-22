@@ -13,6 +13,9 @@ const SEARCH_API =
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+
+const modalContainer = document.getElementById('modal_container');
+const modal = document.querySelector('.modal');
 // ფუნქციის გამოძახება საიდანაც გადავცემთ ენდფოინთს
 getMovies(API_URL);
 
@@ -32,6 +35,8 @@ function showMovies(movies) {
 
   // movies არის უკვე ერეი და გადავატარეთ forEach იმის გამო რო არ ვცვლით ერეის და უბრალოდ ვხატავთ
   movies.forEach((movie) => {
+
+
     // დესტრუქცია მოვახდინეთ movie ელემენტბის და სათითაოდ ამოვიღეთ ის რაც გვჭირდებოდა
     const { title, backdrop_path, vote_average, overview } = movie;
     // შევქმენით დივ რომლეიც ჩაჯდა main სი
@@ -44,16 +49,44 @@ function showMovies(movies) {
             <div class="movie-info">
                 <h3>${title}</h3>
                 <span class="${getClassByRate(
-                  vote_average
-                )}">${vote_average}</span>
+      vote_average
+    )}">${vote_average}</span>
             <div class="overview">
                 <h3>overview</h3>
                 <p>${overview}</p>
             </div>
             </div>
         `;
+
+    // მოდალის გახსნა კლიკზე 
+    movieEl.addEventListener('click', () => {
+      openModal(movie);
+    });
     // მთავარ დივს გადავეცით html ს სტრუქტურა რომ ყველფაერი დაეხატა
     main.appendChild(movieEl);
+  });
+}
+
+function openModal(movie) {
+  console.log(movie);
+
+  modal.innerHTML = `
+        <button class="close-btn" id="close_btn">X</button>
+        <div class="modal-content">
+            <img src="${IMG_PATH + movie.poster_path}" alt="${movie.title}" />
+            <div>
+                <h2>${movie.title}</h2>
+                <p>${movie.overview}</p>
+                <h4>Rating: ${movie.vote_average.toFixed(1)}</h4>
+            </div>
+        </div>
+    `;
+  modalContainer.classList.add('show');
+
+  // დახურვის ღილაკზე ივენთის დამატება
+  const closeBtn = document.getElementById('close_btn');
+  closeBtn.addEventListener('click', () => {
+    modalContainer.classList.remove('show');
   });
 }
 // ყოველ avarage votზე გადავცეთ სათითაო ფეერი კლასად
