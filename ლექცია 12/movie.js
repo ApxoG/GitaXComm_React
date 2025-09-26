@@ -33,7 +33,7 @@ function showMovies(movies) {
   // movies არის უკვე ერეი და გადავატარეთ forEach იმის გამო რო არ ვცვლით ერეის და უბრალოდ ვხატავთ
   movies.forEach((movie) => {
     // დესტრუქცია მოვახდინეთ movie ელემენტბის და სათითაოდ ამოვიღეთ ის რაც გვჭირდებოდა
-    const { title, backdrop_path, vote_average, overview } = movie;
+    const { title, backdrop_path, vote_average, overview, id } = movie;
     // შევქმენით დივ რომლეიც ჩაჯდა main სი
     const movieEl = document.createElement("div");
     // დავამატეთ ზემოთ შექმნილ დივს კლასი movie რომელსაც გავსტილავთ
@@ -52,6 +52,11 @@ function showMovies(movies) {
             </div>
             </div>
         `;
+
+    // გავაკეთოთ ნავიგაცია details გვერდზე დაკლიკებაზე
+    movieEl.addEventListener("click", () => {
+      window.location.href = `movie.html?id=${encodeURIComponent(id)}`;
+    });
     // მთავარ დივს გადავეცით html ს სტრუქტურა რომ ყველფაერი დაეხატა
     main.appendChild(movieEl);
   });
@@ -80,4 +85,7 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// TODO : როდესაც დააჭრთ ერთ ფილმს უნდა გახსნათ პოპ აპში ამ ფილმის ინფორამცია
+// TODO : როდესაც დავაჭერთ ერთ ფილმს
+
+// 4: ავაწყოთ ადგილების ასარჩევი საიდან ფასს და ადგილებსაც დავითვლით
+// 5: ჩეკაუტის გვერდი გვექნება სადაც დაჯამებულ ფასს გადავიტანთ
