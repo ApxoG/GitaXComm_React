@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+.pokemon {
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.img-contianer {
+  border-radius: 50%;
+  background-color: bisque;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info {
+  margin-top: 20px;
+}
