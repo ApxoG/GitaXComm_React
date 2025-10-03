@@ -38,8 +38,8 @@ function showMovies(movies) {
     const movieEl = document.createElement("div");
     // დავამატეთ ზემოთ შექმნილ დივს კლასი movie რომელსაც გავსტილავთ
     movieEl.classList.add("movie");
-    // შექმნილ დივში ჩავხატეთ მოცემული html სტრქუტურა
-    movieEl.innerHTML = `
+    // შექმნილ დივში ჩავხატეთ მოცემული html სტრქუტურა test
+    movieEl.innerHTML = ` 
             <img src="${IMG_PATH + backdrop_path}" alt="${title}" />
             <div class="movie-info">
                 <h3>${title}</h3>
