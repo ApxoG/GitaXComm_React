@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="container m-auto flex justify-center flex-col items-center gap-[20px] mt-[20px]"
+      role="application"
+      aria-label="To-Do App"
+    >
+      <h1>My To-Do List</h1>
+
+      <form id="todoForm" class="input-goup" aria-label="Add a new task">
+        <label class="sr-only" for="taskInput">New Task</label>
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="Add a new task"
+          required
+          aria-required="true"
+          class="border p-2 rounded-md"
+        />
+        <button
+          type="submit"
+          id="addBtn"
+          class="border p-2 rounded-md cursor-pointer"
+        >
+          Add
+        </button>
+      </form>
+
+      <div class="filters" aria-label="Filters">
+        <button
+          data-filter="all"
+          aria-pressed="true"
+          class="border p-2 rounded-md cursor-pointer min-w-[80px]"
+        >
+          All
+        </button>
+        <button
+          data-filter="active"
+          aria-pressed="false"
+          class="border p-2 rounded-md cursor-pointer min-w-[80px]"
+        >
+          Active
+        </button>
+        <button
+          data-filter="completed"
+          aria-pressed="false"
+          class="border p-2 rounded-md cursor-pointer min-w-[80px]"
+        >
+          Completed
+        </button>
+      </div>
+      <ul id="taskList" class="flex flex-col gap-2" role="list"></ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

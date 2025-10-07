@@ -1,0 +1,11 @@
+/* Styling for completed tasks */
+.task.completed {
+  text-decoration: line-through;
+  color: #6b7280; /* Gray color */
+  opacity: 0.7;
+}
+
+/* Optional: Add transition for smooth visual change */
+.title {
+  transition: all 0.2s ease;
+}
