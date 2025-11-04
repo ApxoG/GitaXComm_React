@@ -2,6 +2,7 @@ import { FaPlay } from "react-icons/fa";
 import { FiChevronRight } from "react-icons/fi";
 import { MdOutlineWatchLater } from "react-icons/md";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 /**
  * NowTrendingSection
@@ -50,37 +51,37 @@ function TrendingCard({ movie }) {
   return (
     <article className="relative snap-start shrink-0 w-[25%]  aspect-[3/4] rounded-[28px] overflow-hidden shadow-2xl">
       {/* Poster */}
-      <div
-        className="absolute inset-0 bg-center bg-cover"
-        style={{
-          backgroundImage: `url(${
-            "https://image.tmdb.org/t/p/w1280" + movie.backdrop_path
-          })`,
-        }}
-      />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+      <Link to={`/product/${movie?.id}`}>
+        <div
+          className="absolute inset-0 bg-center bg-cover"
+          style={{
+            backgroundImage: `url(${movie?.image})`,
+          }}
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-      {/* Content */}
-      <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-end gap-3">
-        <span className="self-start px-3 py-1 rounded-full bg-white/15 text-white/90 text-xs sm:text-sm backdrop-blur-[9.3px] border border-white/20">
-          {movie.original_language}
-        </span>
-        <h3 className="text-white text-xl sm:text-2xl font-semibold leading-tight line-clamp-2">
-          {movie.title}
-        </h3>
-        <p className="text-white/80 text-sm leading-relaxed line-clamp-2 sm:line-clamp-3">
-          {movie.overview}
-        </p>
+        {/* Content */}
+        <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-end gap-3">
+          <span className="self-start px-3 py-1 rounded-full bg-white/15 text-white/90 text-xs sm:text-sm backdrop-blur-[9.3px] border border-white/20">
+            {movie.category}
+          </span>
+          <h3 className="text-white text-xl sm:text-2xl font-semibold leading-tight line-clamp-2">
+            {movie.title}
+          </h3>
+          <p className="text-white/80 text-sm leading-relaxed line-clamp-2 sm:line-clamp-3">
+            {movie.description}
+          </p>
 
-        {/* Play Button */}
-        <button
-          aria-label={`Play ${movie.name}`}
-          className="absolute right-4 bottom-4 h-14 w-14 rounded-full flex items-center justify-center bg-white text-neutral-900 hover:bg-white/90 active:bg-white/80 shadow-xl"
-        >
-          <FaPlay className="text-2xl translate-x-[1px]" />
-        </button>
-      </div>
+          {/* Play Button */}
+          <button
+            aria-label={`Play ${movie.name}`}
+            className="absolute right-4 bottom-4 h-14 w-14 rounded-full flex items-center justify-center bg-white text-neutral-900 hover:bg-white/90 active:bg-white/80 shadow-xl"
+          >
+            <FaPlay className="text-2xl translate-x-[1px]" />
+          </button>
+        </div>
+      </Link>
     </article>
   );
 }

@@ -4,7 +4,7 @@ import Trending from "./movie/Trending";
 
 const MainContent = ({ movies }) => {
   return (
-    <div className="ml-10 flex flex-col w-full">
+    <div className="flex flex-col w-full">
       <Banner />
       <div className="mt-8">
         <Trending movies={movies} />

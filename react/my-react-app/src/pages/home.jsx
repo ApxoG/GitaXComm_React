@@ -8,21 +8,19 @@ function Home() {
   useEffect(() => {
     // Fetch movies from an API or other source
     const fetchMovies = async () => {
-      const response = await fetch(
-        "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=3fd2be6f0c70a2a598f084ddfb75487c&page=1"
-      );
+      const response = await fetch("https://fakestoreapi.com/products");
       const data = await response.json();
-      setMovies(data.results);
+      setMovies(data);
     };
 
     fetchMovies();
   }, []);
-
+  console.log(movies);
   return (
-    <div className="p-10  ">
-      <HeaderNav />
+    <div className="">
+      {/* <HeaderNav /> */}
       <div className="flex">
-        <Sidebar />
+        {/* <Sidebar /> */}
         <MainContent movies={movies} />
       </div>
     </div>
